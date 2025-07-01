@@ -1,0 +1,47 @@
+
+/* 내역화면 */
+.c_radio_button_area{
+  display: flex;      /* 한 줄로 나란히 */
+  align-items: center;/* 세로 정렬(가운데) */
+  gap: 8px;           /* 레이블과 select 간격 */
+  width: 100%;
+  /* margin-bottom: 12px;*/
+} 
+
+.c_radio_button_area label {
+  white-space: nowrap; /* 레이블이 길어도 한 줄로 유지 */
+  font-weight: 600;
+  color: #555;
+}
+
+.c_radio_button {
+    flex: 1;             /* 남은 공간 모두 차지 */
+  /* width: 100%; */
+  /* margin: 0 20px 0; */
+  display: flex;
+  gap: 1px;
+  padding:5px 5px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.c_radio_button_item {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 8px 16px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-width: 0 0 0;
+  flex: 1;  /* flex: 1 버튼들이 부모 너비에 맞춰 균등하게 분배 */
+}
+
+.c_radio_button_item:hover {
+  background: #ebeced;
+}
+
+.c_radio_button_item[selected] {
+  background: var(--tab-list-color);
+  color: #fff;
+  border-color: var(--tab-list-color);
+}

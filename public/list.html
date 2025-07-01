@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>index Layout 설계</title>
+    <link href="./styles/controls.css" rel="stylesheet">    
+    <script src="./scripts/controls.js"></script>
+    <link href="./styles/list.css" rel="stylesheet">
+    <script src="./scripts/list.js"></script>
+
+</head>
+
+<body>
+<div class="c_radio_button_area">
+    <label for="radio_button_cond">상태</label>
+    <div class="c_radio_button" id="radio_button_cond">
+        <button class="c_radio_button_item" data-type="cond_all" selected role="radio" aria-checked="true">전체</button>
+        <button class="c_radio_button_item" data-type="cond_stop" role="radio" aria-checked="false">감시전</button>
+        <button class="c_radio_button_item" data-type="cond_run" role="radio" aria-checked="false">감시중</button>
+        <button class="c_radio_button_item" data-type="cond_complete" role="radio" aria-checked="false">조건만족</button>
+    </div>
+</div>
+<div class="c_card_cond_list">
+
+</div>
+</body>
+</html>
+
+

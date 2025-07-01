@@ -1,0 +1,115 @@
+/* 기본 색상정의 */
+:root {
+  --tab-buy-color: #d21919;
+  --tab-sell-color: #1976d2;
+  --tab-list-color: #626262;
+
+}
+
+/* 레이아웃 */
+body{
+  margin: 10px;  
+  padding:0;
+}
+
+.c_layout_conainer{
+  width: 100%;
+}
+
+/* 계좌 */
+.c_account_info {
+  display: flex;      /* 한 줄로 나란히 */
+  align-items: center;/* 세로 정렬(가운데) */
+  gap: 8px;           /* 레이블과 select 간격 */
+  width: 100%;
+  margin-bottom: 12px;
+}
+.c_account_info label {
+  white-space: nowrap; /* 레이블이 길어도 한 줄로 유지 */
+  font-weight: 600;
+  color: #555;
+}
+.c_account_info select{
+  flex: 1;             /* 남은 공간 모두 차지 */
+  /* width: 100%; */
+  margin-top:5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* 탭 메뉴 */
+.c_tab_menu {
+  display: flex;
+  gap: 1px;
+  padding:5px 5px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.c_tab_menu_item {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 8px 16px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-width: 0 0 0;
+  flex: 1;  /* flex: 1 버튼들이 부모 너비에 맞춰 균등하게 분배 */
+}
+.c_tab_menu_item[data-type="buy"] {
+  /* 매수 버튼*/
+  color: var(--tab-buy-color);
+}
+.c_tab_menu_item[data-type="sell"] {
+  /* 매도 버튼*/
+  color: var(--tab-sell-color);
+}
+.c_tab_menu_item[data-type="list"] {
+  /* 내역 버튼*/
+  color: var(--tab-list-color);
+}
+.c_tab_menu_item:hover {
+  background: #ebeced;
+}
+
+/* .c_tab_menu_item[selected] {
+  background: var(--tab-sell-color);
+  color: #fff;
+  border-color: var(--tab-sell-color);
+} */
+.c_tab_menu_item[data-type="buy"][selected] {
+  /* 매수 버튼*/
+  background: #fff;
+  color: var(--tab-buy-color);
+  border-color: var(--tab-buy-color);
+  border-width: 0 0 2px;
+}
+.c_tab_menu_item[data-type="sell"][selected] {
+  /* 매도 버튼*/
+  background: #fff;
+  color: var(--tab-sell-color);
+  border-color: var(--tab-sell-color);
+  border-width: 0 0 2px;
+}
+.c_tab_menu_item[data-type="list"][selected] {
+  /* 내역 버튼*/
+  background: #fff;
+  color: var(--tab-list-color);
+  border-color: var(--tab-list-color);
+  border-width: 0 0 2px;
+}
+
+/* 내역화면 */
+.c_radio_button_area{
+  display: flex;      /* 한 줄로 나란히 */
+  align-items: center;/* 세로 정렬(가운데) */
+  gap: 8px;           /* 레이블과 select 간격 */
+  width: 100%;
+  /* margin-bottom: 12px;*/
+} 
+
+.c_radio_button_area label {
+  white-space: nowrap; /* 레이블이 길어도 한 줄로 유지 */
+  font-weight: 600;
+  color: #555;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>index Layout 설계</title>
+    <link href="./styles/controls.css" rel="stylesheet">    
+    <script src="./scripts/controls.js"></script>
+    <link href="./styles/list.css" rel="stylesheet">
+    <script src="./scripts/list.js"></script>
+
+</head>
+
+<body>
+    <!-- 컨테이너 -->
+    
+    <div class='c_layout_conainer' id='layout_top_container'></div>
+    <div class='c_layout_conainer' id='layout_middle_container'></div>
+    <div id='layout_middle_iframe'>
+
+    </div>
+    <script>
+        // 전체 조립
+        document.getElementById('layout_top_container').innerHTML = accountInfo + tabMenu;
+        //document.getElementById('layout_middle_container').innerHTML = scrList;
+
+        loadHtmlToIframe(`./public/list.html`, '#layout_middle_iframe');
+    </script>
+</body>
+
+</html>
